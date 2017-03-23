@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Belajar HTML</title>
+
+	<link rel = 'stylesheet' href= 'style.css'/>
+
+</head>
+<body>
+<div id='sidebar'>
+
+
+	<ul id ='menu'>
+		<li><a href ='#'>Home </a> </li>
+		<li id='selected'> <a href ='#'>Form </a> </li>
+		<li><a href ='#'> About</a> </li>
+		<li><a href ='#'> Setting</a> </li>
+	</ul>
+
+
+</div>
+
+
+<div id='form'>
+	<h1>KONFIRMASI PEMBAYARAN</h1>
+
+	<form method="post" class="form">
+		<table>
+			<tr>
+				<td>Nama Lengkap</td>
+				<td><input class ='inputBox' id="nama" type="text" width=200 placeholder="Masukan Nama"></input>
+				<span class="pesan pesan-nama">Anda harus mengisi nama</span></td>
+			</tr>
+
+			<tr>
+			<td>NPM</td>
+				<td><input  class ='inputBox' id="npm" type="text" width=200 placeholder="Masukan NPM"></input>
+				<span class="pesan pesan-npm">Anda harus mengisi NPM</span></td>
+			</tr>
+			<tr>
+				<td>Email</td>
+				<td><input class ='inputBox' id="email" type="email" width=200 placeholder="Masukan Email"></input>
+				<span class="pesan pesan-email">Anda harus mengisi Email</span></td>
+			</tr>
+			<tr>
+				<td>Jurusan</td>
+				<td>
+					<select id="jurusan" class ='inputBox' >
+						<option></option>
+						<option>Informatika</option>
+						<option>Sistem Informasi</option>
+						<option>Sistem Komputer</option>
+					</select>
+					<span class="pesan pesan-jurusan">Anda harus memilih salah satu jurusan</span>
+				</td>
+			</tr>
+			<tr>
+
+			<tr>
+				<td>Tanggal Pembayaran</td>
+			 <td><input input class ='inputBox' id="tanggal" type="date" name="bday" width=200 placeholder="Masukan Tanggal"></input>
+			 <span class="pesan pesan-tanggal">Anda harus mengisi tanggal Pembayaran</span></td>
+			</tr>
+			<td>Membayar</td>
+			<td>
+				<select class ='inputBox' >
+					<option>Bayar SPP</option>
+					<option>Bayar Gedung</option>
+					<option>Bayar Pratikum</option>
+				</select>
+			</td>
+		</tr>
+			<tr>
+				<td>Jumlah Pembayaran</td>
+				<td><input class ='inputBox' type="text" width=200 placeholder="Masukan Jumlah Pembayaran"></input></td>
+			</tr>
+			<tr>
+				<td>Metode Pembayaran</td>
+				<td>
+					<select class ='inputBox'>
+						<option>Transfer Atm</option>
+						<option>Test</option>
+						<option>Test</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>Bank Anda</td>
+				<td>
+					<select class ='inputBox' >
+						<option>-Pilih Bank-</option>
+						<option>BRI</option>
+						<option>BNI</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>Nomor Rekening Anda</td>
+				<td><input class ='inputBox' type="text" width=200 placeholder="Masukan No Rekening Anda"></input></td>
+			</tr>
+			<tr>
+				<td>Nama Rekening Pengirim</td>
+				<td><input class ='inputBox'  type="text" width=200 placeholder="Masukan Nama Pemilik Rekening"></input></td>
+			</tr>
+
+			<tr>
+				<td>Unggah Bukti Pembayaran</td>
+				<td><input type="file" ></input>
+				</td>
+			</tr>
+		</table>
+		<button type = "submit">Submit</button>
+	</form>
+</div>
+</body>
+<script type="text/javascript" src="jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('.form').submit(function() {
+			var nama = $('#nama').val().length;
+			var npm = $('#npm').val().length;
+			var email = $('#email').val().length;
+			var jurusan = $('#jurusan').val().length;
+			var tanggal = $('#tanggal').val().length;		
+ 
+			if (nama == 0) {				
+				$(".pesan-nama").css('display','block');
+			}
+
+			if (npm == 0) {				
+				$(".pesan-npm").css('display','block');
+			}
+			if (email == 0) {				
+				$(".pesan-email").css('display','block');
+			}
+			if (jurusan == 0) {				
+				$(".pesan-jurusan").css('display','block');
+			}
+			if (tanggal == 0) {				
+				$(".pesan-tanggal").css('display','block');
+			}
+			return false;
+		});
+	});
+</script>
+</html>

@@ -1,0 +1,100 @@
+*
+{
+color: #333333;
+font-family: Century Gothic, sans-serif;
+}
+
+body{
+  background-color: #ffffe6 ;
+}
+
+#sidebar
+{
+  position: fixed;
+  top : 0px;
+  left: 0px;
+  width: 20%;
+  height: 100%;
+  background-color: rgb(51, 102, 153);
+}
+
+#form
+{
+margin-left: 22%;
+width: 50%;
+
+}
+
+.inputBox
+{
+  padding: 12px;
+  width: 180%;
+  box-sizing: border-box;
+  border : 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 5%;
+  margin-top: 15px;
+
+
+}
+span{
+  width: 100%;
+}
+
+input[type="file"]
+{
+  margin: 5%;
+}
+
+button[type= 'submit']
+{
+  background-color: #4ad664;
+padding: 12px;
+width: 30%;
+color: white;
+margin-bottom: 5%;
+border-radius: 4px;
+border: none;
+float: right;
+cursor: pointer;
+
+}
+#menu
+{
+position: relative;
+width: 100%;
+margin-top: 50%;
+list-style: none;
+right: 15%;`
+}
+
+#menu li
+{
+
+  padding :12px;
+  border-bottom: 1px solid gray;
+
+
+
+}
+
+#menu li a{
+  text-decoration: none;
+  color: white;
+}
+#selected
+{
+  background-color: #4e3bcc;
+
+}
+
+#menu li:hover
+{
+  background-color: #4e3bcc;
+}
+
+.pesan
+{
+  display: none;
+  color: red; 
+}
